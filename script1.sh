@@ -6,7 +6,7 @@ read dirname
 if [ ! -d "$dirname" ]
 then
   echo "file does not exits. creating ..."
-  mkdir ./$dirname
+  mkdir ~/Documents/testdir/dirscripts/$dirname
   echo "file created"
 else
   echo "file existed"
