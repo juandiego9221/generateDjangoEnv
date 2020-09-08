@@ -1,6 +1,6 @@
 #!/bin/bash
 destiny_path=~/Documents/testdir/dirscripts
-echo "Enter directory name"
+echo "Enter directory workspace name"
 read dirname
 
 if [ ! -d "$dirname" ]
@@ -20,4 +20,10 @@ source $destiny_path/$dirname/bin/activate
 echo " Finish activation"
 echo " Installing requirements ..."
 pip install -r requirements.txt
-echo " Finish with requirements"
+echo " Finish with requirementst "
+echo "Enter project name:"
+read dirname2
+mkdir $destiny_path/$dirname/$dirname2
+echo " Creating project ..."
+django-admin startproject $dirname2 $destiny_path/$dirname/$dirname2
+echo " Finish creating projectt"
