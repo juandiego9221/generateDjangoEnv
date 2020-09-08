@@ -1,13 +1,18 @@
 #!/bin/bash
-#echo "hola mundo"
+destiny_path=~/Documents/testdir/dirscripts
 echo "Enter directory name"
 read dirname
 
 if [ ! -d "$dirname" ]
 then
-  echo "file does not exits. creating ..."
-  mkdir ~/Documents/testdir/dirscripts/$dirname
-  echo "file created"
+  echo "directory does not exits. creating ..."
+  mkdir $destiny_path/$dirname
+  echo "directory created"
 else
-  echo "file existed"
+  echo "directory existed"
 fi
+cd $destiny_path/$dirname
+echo $PWD
+echo "generating enviroment"
+python3 -m venv $destiny_path/$dirname
+echo "eviroment generated"
