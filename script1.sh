@@ -1,7 +1,8 @@
 #!/bin/bash
 destiny_path=~/Documents/testdir/dirscripts
-echo "Enter directory workspace name"
-read dirname
+dirname=$1
+dirname2=$2
+app=$3
 
 if [ ! -d "$dirname" ]
 then
@@ -21,9 +22,11 @@ echo " Finish activation"
 echo " Installing requirements ..."
 pip install -r requirements.txt
 echo " Finish with requirementst "
-echo "Enter project name:"
-read dirname2
 mkdir $destiny_path/$dirname/$dirname2
 echo " Creating project ..."
 django-admin startproject $dirname2 $destiny_path/$dirname/$dirname2
 echo " Finish creating projectt"
+echo " Creatin  app ..."
+mkdir $destiny_path/$dirname/$dirname2/$app
+#python3 $destiny_path/$dirname/$dirname2/manage.py startapp $app $destiny_path/$dirname/$dirname2/$app
+django-admin startapp $app $destiny_path/$dirname/$dirname2/$app
