@@ -1,5 +1,5 @@
 #!/bin/bash
-destiny_path=~/Documents/testdir/dirscripts
+destiny_path=/home/juandiego/Documents/pythonproy/c4
 dirname=$1
 dirname2=$2
 app=$3
