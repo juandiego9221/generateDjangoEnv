@@ -21,27 +21,30 @@ if [ ! -d "$dirname" ]
 then
   echo " Directory does not exits. creating ..."
   mkdir $destiny_path/$dirname
-  echo " Directory created"
+  echo "1. Directory created"
 else
   echo " Directory existed"
 fi
 #echo $PWD
-echo " Generating enviroment ..."
+echo "2. Generating enviroment ..."
 python3 -m venv $destiny_path/$dirname
 echo " Enviroment generated"
-echo " Activating enviroment ..."
+echo "3. Activating enviroment ..."
 source $destiny_path/$dirname/bin/activate
 echo " Finish activation"
-echo " Installing requirements ..."
+echo "4. Installing requirements ..."
 pip install -r requirements.txt
 echo " Finish with requirementst "
 mkdir $destiny_path/$dirname/$dirname2
-echo " Creating project ..."
+echo "5. Creating project ..."
 django-admin startproject $dirname2 $destiny_path/$dirname/$dirname2
 echo " Finish creating projectt"
-echo " Creatin  app ..."
+echo "6. Creatin  app ..."
 mkdir $destiny_path/$dirname/$dirname2/$app
 django-admin startapp $app $destiny_path/$dirname/$dirname2/$app
+
+./generateBranch.sh $destiny_path/$dirname/$dirname2
+HORA_FIN=$(date)
 
 echo -e "\n"
 echo "============================================================"
