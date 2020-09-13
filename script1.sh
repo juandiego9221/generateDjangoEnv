@@ -44,6 +44,11 @@ mkdir $destiny_path/$dirname/$dirname2/$app
 django-admin startapp $app $destiny_path/$dirname/$dirname2/$app
 
 ./generateBranch.sh $destiny_path/$dirname/$dirname2
+
+./generateDockerConfiguration.sh $destiny_path/$dirname
+
+
+
 HORA_FIN=$(date)
 
 echo -e "\n"
