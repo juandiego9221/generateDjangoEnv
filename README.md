@@ -10,7 +10,7 @@ https://medium.com/@rajputankit22/upgrade-python-2-7-to-3-6-and-3-7-in-ubuntu-97
   
 **Quick start guide:**  
 1. git clone https://github.com/juandiego9221/generateDjangoEnv.git
-2. Locat a path that you want to create al your projects
+2. Locate a path that you want to create al your projects
 3. Configure your chosen path in main.properties in generateDjangoEnv/main.properties, variable: **destiny.path**  
   Example: destiny.path=/home/XXXX/pythonproys
 4. execute ./scrip1.sh workspace project application  
